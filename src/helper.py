@@ -35,7 +35,7 @@ def get_vector_store(text_chunks):
 def get_conv_chain(vector_store):
     llm=google_palm()
     memory = ConversationBufferMemory(memory_key = "chat_history", return_messages=True)
-    conversation_chain = conversationalRetrievalChain.from_ll(LLm=llm, retriever=vector_store.as_retriever(), memory=memory)
+    conversation_chain = conversationalRetrievalChain.from_ll(llmm=llm, retriever=vector_store.as_retriever(), memory=memory)
     return conversation_chain
 
 
